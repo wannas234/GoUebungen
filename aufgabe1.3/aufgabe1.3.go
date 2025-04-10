@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Aufgabe1.3: Erstelle eine Go Routine
 func sayHello() {
 	fmt.Println("Hallo von der Goroutine!")
 }
