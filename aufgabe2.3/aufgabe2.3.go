@@ -2,17 +2,14 @@ package main
 
 import "fmt"
 
-func fibonacci(n int) {
-
-	a, b := 0, 1
-
-	for a <= n {
-		fmt.Print(a, " ")
-
-		a, b = b, a+b
-	}
-}
-
+// Aufgabe2.3: Führe Addition und Subtraktion mit Variablen a und b durch
 func main() {
-	fibonacci(35)
+	a := 10
+	b := 4
+
+	addition := a + b
+	subtraktion := a - b
+
+	fmt.Println("Addition:", addition)
+	fmt.Println("Subtraktion:", subtraktion)
 }
