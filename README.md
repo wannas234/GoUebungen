@@ -7,7 +7,7 @@ Das fmt-Paket wird genutzt, um etwas auf dern Konsole auszugeben.
 
 Das time-Paket wird benutzt, um z.B. Pausen einzubauen oder mit Zeiten zu arbeiten.
 
-time.Sleep sagt dem Programm, dass es für 3 Sekunden warten soll. (Ausführung wird pausiert)
+time.Sleep sagt dem Programm, dass es für eine gewisse Zeit warten soll. (Ausführung wird pausiert)
 
 Func main() ist die Hauptfunktion. Ohne diese Funktion läuft nichts.
 
