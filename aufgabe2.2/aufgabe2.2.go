@@ -21,7 +21,6 @@ func main() {
 		time.Sleep(1 * time.Second)
 		messageChannel <- "Manfred: Bei mir geht nichts, Was Geht bei dir??"
 		close(messageChannel)
-
 	}()
 
 	for msg := range messageChannel {
