@@ -28,6 +28,7 @@ Aufgabe 1.3 Erstelle eine Go Routine
 **Zweite Übungseinheit - Einleitung:**
 
 **Zweite Übungseinheit - Aufgabenstellungen:**
+
 Aufgabe 2.1 Erstelle einen Channel
 
 Aufgabe 2.2 Erstelle mithilfe von Go Routinen und Channels einen Dialog zwischen Lisa und Manfred
@@ -39,6 +40,7 @@ Aufgabe2.3:
 **Dritte Übungseinheit - Einleitung:**
 
 **Dritte Übungseinheit - Aufgabenstellungen:**
+
 Aufgabe3.1: Erstelle ein Programm, das zwei Zahlen multipliziert und das Ergebnis durch eine dritte Zahl teilt.
 
 Aufgabe3.2: Führe Addition und Subtraktion mit Variablen a und b durch
