@@ -14,6 +14,7 @@ Func main() ist die Hauptfunktion. Ohne diese Funktion läuft nichts.
 *Func (Funktions Name)* ist eine eigene Funktion die definiert werden muss.
 
 In main() wird parallel die Funktion *Func (Funktions Name)* gestartet.
+
 **Erste Übungseinheit - Aufgabenstellungen:**
 
 Aufgabe 1.1 Erstelle einen "Hallo, Welt!" Ausgabe im Terminal.
