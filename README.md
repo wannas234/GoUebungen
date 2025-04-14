@@ -11,7 +11,7 @@ time.Sleep sagt dem Programm, dass es für eine gewisse Zeit warten soll. (Ausf�
 
 Func main() ist die Hauptfunktion. Ohne diese Funktion läuft nichts.
 
-Func GoRoutine() ist eine eigene Funktion die definiert werden muss.
+Func (Funktions Name) ist eine eigene Funktion die definiert werden muss.
 
 In main() wird parallel die Funktion GoRoutine() gestartet.
 
