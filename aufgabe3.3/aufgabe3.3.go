@@ -15,6 +15,6 @@ func fib() func() int {
 
 func main() {
 	f := fib() // Erstelle eine Instanz der Fibonacci-Funktion
-	// Rufe die Funktion `f` sechsmal auf, um die ersten 6 Fibonacci-Zahlen zu berechnen und auszugeben
+	// Rufe die Funktion `f` sechsmal auf, um die ersten 6 Fibonacci-Zahlen zu berechnen und auszugeben.
 	fmt.Println(f(), f(), f(), f(), f(), f())
 }
