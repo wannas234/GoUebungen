@@ -3,17 +3,31 @@ Wilkommen zu den Go Übungen!
 
 **Einleitung:**
 
+>═══ 🚀 Basics 🚀 ═══
+
 Das fmt-Paket wird genutzt, um etwas auf dern Konsole auszugeben.
 
 Das time-Paket wird benutzt, um z.B. Pausen einzubauen oder mit Zeiten zu arbeiten.
 
 time.Sleep sagt dem Programm, dass es für eine gewisse Zeit warten soll. (Ausführung wird pausiert)
 
-Func main() ist die Hauptfunktion. Ohne diese Funktion läuft nichts.
+func main() ist die Hauptfunktion, ohne diese Funktion läuft nichts.
 
-*Func (Funktions Name)* ist eine eigene Funktion die definiert werden muss.
+>═══ 🚀 GoRoutinen 🚀 ═══
 
-In main() wird parallel die Funktion **go** *func (Funktions Name)* gestartet.
+*func (Funktions Name)* ist eine eigene Funktion die definiert werden muss.
+
+Ruft man die bereits definierte Funktion in der main() mit dem Schlüsselwort **go** auf, wird sie als Go Routine gestartet, (Die Funktion wird im Hintergrund ausgeführt, während main() weiterläuft.)
+
+>═══ 🚀 Channels 🚀 ═══
+
+Ein Channel ist ein spezieller Typ in Go, über den Goroutinen Daten austauschen können. 
+
+->Channel erstellen: **ch := make(chan int)**, 
+
+->Wert in einen Channel legen: **ch <- 42**, 
+
+->Wert aus dem Channel empfangen: **Empfangen := <-ch**)
                                     
 ------------------------------------------------------------------------------
 
@@ -23,7 +37,7 @@ Aufgabe 1.1 Erstelle einen "Hallo, Welt!" Ausgabe im Terminal.
 
 Aufgabe 1.2: Kombiniere time.Sleep mit Println um nach einer Konsolen Ausgabe, die nächste Ausgabe erst nach 3 Sekunden starten zu lassen.
 
-Aufgabe 1.3 Erstelle eine Go Routine
+Aufgabe 1.3 Erstelle eine Go Routine, welche in der main Methode aufgerufen, und im Hintergrund ausgeführt wird.
 
 ------------------------------------------------------------------------------
 
