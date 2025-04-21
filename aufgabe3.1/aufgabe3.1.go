@@ -2,13 +2,15 @@ package main
 
 import "fmt"
 
-// Aufgabe3.1: Erstelle ein Programm, das zwei Zahlen multipliziert und das Ergebnis durch eine dritte Zahl teilt.
+// Aufgabe3.1: Erstelle einen Channel
 func main() {
-	a := 6
-	b := 3
-	c := 2
 
-	result := (a * b) / c
+	channel := make(chan string)
 
-	fmt.Println("Ergebnis:", result)
+	go func() {
+		channel <- "Hallo, Welt!"
+	}()
+
+	message := <-channel
+	fmt.Println(message)
 }

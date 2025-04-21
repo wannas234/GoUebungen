@@ -1,29 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
-// Aufgabe2.2: Erstelle mithilfe von Go Routinen und Channels einen Dialog zwischen Lisa und Manfred
+// Aufgabe2.2: Führe Addition und Subtraktion mit Variablen a und b durch
 func main() {
+	a := 10
+	b := 4
 
-	messageChannel := make(chan string)
+	addition := a + b
+	subtraktion := a - b
 
-	go func() {
-		messageChannel <- "Lisa: Guten Tag"
-		time.Sleep(1 * time.Second)
-		messageChannel <- "Lisa: Lang nichts mehr gehört!"
-		time.Sleep(1 * time.Second)
-		messageChannel <- "Lisa: Was machen Sachen?"
-		time.Sleep(1 * time.Second)
-		messageChannel <- "Manfred: Heyyyyy"
-		time.Sleep(1 * time.Second)
-		messageChannel <- "Manfred: Bei mir geht nichts, Was Geht bei dir??"
-		close(messageChannel)
-	}()
-
-	for msg := range messageChannel {
-		fmt.Println(msg)
-	}
+	fmt.Println("Addition:", addition)
+	fmt.Println("Subtraktion:", subtraktion)
 }

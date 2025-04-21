@@ -1,20 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
-// Aufgabe3.3: Erstelle ein Programm, welches die ersten 6 Fibonacci-Zahlen ausgibt.
+// GO Channels Aufgabe für Mega Ultra Profis :Sonnenbrillenemoji:
 
-// Die Funktion `fib` gibt eine Funktion zurück, die die nächste Fibonacci-Zahl berechnet.
-func fib() func() int {
-	a, b := 0, 1 // Initialisiere die ersten beiden Fibonacci-Zahlen: a = 0, b = 1
-	return func() int {
-		a, b = b, a+b // Berechne die nächste Fibonacci-Zahl: a wird b, b wird a+b
-		return a      // Gib die aktuelle Fibonacci-Zahl (a) zurück
+// Aufgabenstellung: Erstelle ein ausführbares GO-Projekt mit einer Funktion namens
+// "boring", welche eine Nachricht als Funktionsargument annimmt und diese permanent
+// mit einem Delay zwischen 1 - 1000ms an einen Kanal sendet. Die entsandten
+// Nachrichten sollen in der Main-Funktion abgefangen und in der
+// Konsole ausgegeben werden.
+// Nach der fünften Nachricht wird in der Konsole "Mir reichts. Du bist langweilig."
+// ausgegeben und das Programm beendet.
+
+// Tipp: Benutzt die Pakete "fmt", "time" und "math/rand"
+
+func boring(msg string, c chan string) {
+	for i := 0; ; i++ {
+		c <- fmt.Sprintf("%s %d\n", msg, i)
+		time.Sleep(time.Duration(rand.Intn(1e3)) * time.Millisecond)
 	}
 }
 
 func main() {
-	f := fib() // Erstelle eine Instanz der Fibonacci-Funktion
-	// Rufe die Funktion `f` sechsmal auf, um die ersten 6 Fibonacci-Zahlen zu berechnen und auszugeben.
-	fmt.Println(f(), f(), f(), f(), f(), f())
+	c := make(chan string)
+	go boring("Langweilig!", c)
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Du sagst %s", <-c)
+	}
+	fmt.Println("Mir reichts. Du bist langweilig.")
 }
