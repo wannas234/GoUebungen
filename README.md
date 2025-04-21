@@ -14,6 +14,8 @@ Func main() ist die Hauptfunktion. Ohne diese Funktion läuft nichts.
 *Func (Funktions Name)* ist eine eigene Funktion die definiert werden muss.
 
 In main() wird parallel die Funktion **go** *func (Funktions Name)* gestartet.
+                                    
+------------------------------------------------------------------------------
 
 **Erste Übungseinheit - Aufgabenstellungen:**
 
@@ -31,7 +33,7 @@ Aufgabe 2.1: Erstelle ein Programm, das zwei Zahlen multipliziert und das Ergebn
 
 Aufgabe 2.2: Führe Addition und Subtraktion mit Variablen a und b durch
 
-Aufgabe2.3: Erstelle ein Programm, welches die ersten 6 Fibonacci-Zahlen ausgibt.
+Aufgabe 2.3: Erstelle ein Programm, welches die ersten 6 Fibonacci-Zahlen ausgibt.
 
 ------------------------------------------------------------------------------
 
